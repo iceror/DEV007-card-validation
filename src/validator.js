@@ -1,6 +1,4 @@
 const validator = {
-  test: "is working",
-
   isValid: function (x) {
     return luhnAlgorithm(x);
   },
@@ -9,6 +7,20 @@ const validator = {
     let hiddenNumbers = x.substring(0, x.length - 4);
     hiddenNumbers = hiddenNumbers.replace(/\d/g, "#");
     return hiddenNumbers + x.slice(-4);
+  },
+
+  getBank: function (creditCardNumber) {
+    let bank = '';
+    if (creditCardNumber.charAt(0) === '4') {
+      bank = 'Visa';
+    } else if (creditCardNumber.substring(0, 2) === '34' || creditCardNumber.substring(0, 2) === '37') {
+      bank = 'AmericanExpress';
+    } else if (creditCardNumber.substring(0, 2) >= '51' && creditCardNumber.substring(0, 2) <= '55') {
+      bank = 'MasterCard';
+    } else {
+      bank = 'Banco desconocido'
+    }
+    return bank;
   }
 };
 
