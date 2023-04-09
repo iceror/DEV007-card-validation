@@ -8,6 +8,7 @@ function validateCreditCard() {
   if (validateNumbers(creditCardNumber)) {
     validator.isValid(creditCardNumber);
     validator.maskify(creditCardNumber);
+    validator.getBank(creditCardNumber);
     return (creditCardNumber);
   }
 }
@@ -19,6 +20,6 @@ function validateNumbers(creditCardNumber) {
   }
   else {
     alert('Ingrese un número de tarjeta válido');
-    //return false;
+    return false;
   }
 }
