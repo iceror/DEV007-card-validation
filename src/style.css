@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Quickand', sans-serif;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  background-color: rgb(133, 174, 185);
+  height: 5rem;
+  font-size: 1.5rem;
+}
+
+h1 {
+  color: white;
+  font-weight: 500;
+  margin-left: 1rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 5rem);
+  ;
+  justify-content: center;
+  align-items: center;
+}
+
+.checkout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: rgb(238, 247, 247);
+  border-radius: .5rem;
+  box-shadow: 5px 5px 30px 1px rgba(0, 0, 0, 0.2);
+  height: 75%;
+  width: 50%;
+}
+
+.checkout h2 {
+  font-size: 1.8rem;
+}
+
+.checkout input {
+  width: 18rem;
+  height: 1.8rem;
+}
+
+.checkout .cvv-expiracion {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.cvv-expiracion .cvv {
+  width: 3rem;
+  margin-right: 1rem;
+}
+
+.cvv-expiracion .expiracion {
+  width: 5rem;
+}
+
+.checkout .validate-btn {
+  border: none;
+  height: 2.5rem;
+  width: 5rem;
+  background-color: rgb(133, 174, 185);
+  border-radius: 0.5rem;
+  color: white;
+  font-size: 1rem;
+}

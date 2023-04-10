@@ -8,13 +8,28 @@
 </head>
 
 <body>
-  <header></header>
+  <header>
+    <h1>Checkout</h1>
+  </header>
   <main>
-    <h2>Ingrese número de tarjeta: </h2>
-    <input type="text" minlength="16" maxlength="16" name="card-number" class="card-number" id="card-number">
-    <button id="validate-btn">Validar</button>
+    <div class="checkout">
+      <h2>Ingrese sus datos</h2>
+      <input type="text" placeholder="Nombre completo" class="name" id="name">
+      <input type="text" placeholder="Dirección" class="address" id="address">
+      <input type="text" placeholder="Código postal" class="cp" id="cp">
+      <input type="text" placeholder="Correo electrónico" class="email" id="email">
+      <h2>Ingrese número de tarjeta: </h2>
+      <input type="text" minlength="16" maxlength="16" name="card-number" class="card-number" id="card-number">
+      <div class="cvv-expiracion">
+        <input type="text" placeholder="CVV" class="cvv">
+        <input type="text" placeholder="Expiración" class="expiracion">
+      </div>
+      <button class="validate-btn" id="validate-btn">Validar</button>
+    </div>
   </main>
-  <footer></footer>
+  <footer>
+
+  </footer>
   <script src="index.js" type="module"></script>
 </body>
 
