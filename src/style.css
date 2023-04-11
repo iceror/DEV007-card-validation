@@ -17,7 +17,7 @@ header {
 
 h1 {
   color: white;
-  font-weight: 500;
+  font-weight: 550;
   margin-left: 1rem;
 }
 
@@ -74,4 +74,49 @@ main {
   border-radius: 0.5rem;
   color: white;
   font-size: 1rem;
+  cursor: pointer;
+}
+
+/* MODAL */
+
+.modal-container {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.3);
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  pointer-events: none;
+  opacity: 0;  
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  transition: opacity 0.3s ease;
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: rgb(238, 247, 247);
+  height: 50%;
+  width: 50%;
+  border-radius: .5rem;
+}
+
+.show {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.modal .close {
+  border: none;
+  height: 2.5rem;
+  width: 5rem;
+  background-color: rgb(133, 174, 185);
+  border-radius: 0.5rem;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
 }
