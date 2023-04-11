@@ -1,12 +1,20 @@
 const validator = {
-  isValid: function (x) {
-    return luhnAlgorithm(x);
+  isValid: function (creditCardNumber) {
+    return luhnAlgorithm(creditCardNumber);
   },
 
-  maskify: function (x) {
-    let hiddenNumbers = x.substring(0, x.length - 4);
+  maskify: function (creditCardNumber) {
+    let hiddenNumbers = creditCardNumber.substring(0, creditCardNumber.length - 4);
     hiddenNumbers = hiddenNumbers.replace(/\d/g, "#");
-    return hiddenNumbers + x.slice(-4);
+    hiddenNumbers = (hiddenNumbers + creditCardNumber.slice(-4));
+
+    //show card number in modal
+    document.getElementById("show-card-number").textContent =
+    'Tarjeta ' + hiddenNumbers;
+
+    //alert(hiddenNumbers);
+    return hiddenNumbers;
+
   },
 
   getBank: function (creditCardNumber) {
@@ -20,6 +28,10 @@ const validator = {
     } else {
       bank = 'Banco desconocido'
     }
+
+    //show bank in modal
+    document.getElementById("bank").textContent = bank;
+    //alert(bank);
     return bank;
   }
 };

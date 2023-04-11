@@ -23,3 +23,15 @@ function validateNumbers(creditCardNumber) {
     return false;
   }
 }
+
+// Modal 
+let modalContainer = document.getElementById('modal-container');
+let closeModal = document.getElementById('close');
+
+validateButton.addEventListener('click', () => {
+  modalContainer.classList.add('show');
+});
+
+closeModal.addEventListener('click', () => {
+  modalContainer.classList.remove('show');
+});
