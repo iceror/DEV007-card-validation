@@ -10,7 +10,7 @@ const validator = {
 
     //show card number in modal
     document.getElementById("show-card-number").textContent =
-    'Tarjeta ' + hiddenNumbers;
+    hiddenNumbers;
 
     //alert(hiddenNumbers);
     return hiddenNumbers;
