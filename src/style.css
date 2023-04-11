@@ -110,6 +110,11 @@ main {
   opacity: 1;
 }
 
+.modal .shopper-info {
+  display: flex;
+  flex-direction: column;
+}
+
 .modal .close {
   border: none;
   height: 2.5rem;

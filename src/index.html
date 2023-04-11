@@ -20,10 +20,12 @@
       <input type="text" placeholder="Correo electrónico" class="email" id="email">
       <h2>Ingrese número de tarjeta: </h2>
       <input type="text" minlength="16" maxlength="16" name="card-number" class="card-number" id="card-number">
+
       <div class="cvv-expiracion">
-        <input type="text" placeholder="CVV" class="cvv">
-        <input type="text" placeholder="Expiración" class="expiracion">
+        <input type="password" placeholder="CVV" maxlength="3" class="cvv">
+        <input type="text" placeholder="Expiración" maxlength="5" class="expiracion">
       </div>
+
       <button class="validate-btn" id="validate-btn">Validar</button>
     </div>
 
@@ -31,15 +33,21 @@
       <div class="modal" id="modal">
 
         <h3>¡Compra realizada!</h3>
-        <!-- Mostrar datos del comprador -->
-        <p id="nombre-modal"></p>
-        <p id="direccion-modal"></p>
-        <p id="codigo-postal-modal"></p>
-        <p id="correo-modal"></p>
 
-        <p>Cargo a la tarjeta:</p>
-        <p id="show-card-number"></p>
-        <p id="bank"></p>
+        <h3>Tu compra será enviada a:</h3>
+        <div class="shopper-info">
+          <p id="nombre-modal"></p>
+          <p id="direccion-modal"></p>
+          <p id="codigo-postal-modal"></p>
+          <p id="correo-modal"></p>
+        </div>
+
+        <div class="card-info">
+          <p>Cargo a la tarjeta:</p>
+          <p id="show-card-number"></p>
+          <p id="bank"></p>
+        </div>
+
         <button class="close" id="close">Cerrar</button>
 
       </div>
