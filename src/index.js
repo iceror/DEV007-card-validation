@@ -11,12 +11,13 @@ function validateCreditCard() {
     validator.getBank(creditCardNumber);
     showShopperInfo();
     return (creditCardNumber);
-  }
+  } 
 }
 
 function validateNumbers(creditCardNumber) {
   const numbers = /^[0-9]+$/;
   if (creditCardNumber.match(numbers) && creditCardNumber.length === 16) {
+    showModal();
     return true;
   }
   else {
@@ -26,16 +27,18 @@ function validateNumbers(creditCardNumber) {
 }
 
 // Modal 
-let modalContainer = document.getElementById('modal-container');
-let closeModal = document.getElementById('close');
-
-validateButton.addEventListener('click', () => {
-  modalContainer.classList.add('show');
-});
-
-closeModal.addEventListener('click', () => {
-  modalContainer.classList.remove('show');
-});
+function showModal(){
+  let modalContainer = document.getElementById('modal-container');
+  let closeModal = document.getElementById('close');
+  
+  validateButton.addEventListener('click', () => {
+    modalContainer.classList.add('show');
+  });
+  
+  closeModal.addEventListener('click', () => {
+    modalContainer.classList.remove('show');
+  });
+}
 
 //Mostrar datos del comprador
 function showShopperInfo() {
@@ -62,5 +65,4 @@ function showShopperInfo() {
 
   document.getElementById("correo-modal").textContent =
     localStorage.getItem('email');
-
 }

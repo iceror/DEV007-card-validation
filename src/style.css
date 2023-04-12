@@ -77,6 +77,10 @@ main {
   cursor: pointer;
 }
 
+.validate-btn:hover {
+  background-color: rgb(102, 133, 142);
+}
+
 /* MODAL */
 
 .modal-container {
@@ -124,4 +128,8 @@ main {
   color: white;
   font-size: 1rem;
   cursor: pointer;
+}
+
+.modal .close:hover {
+  background-color: rgb(115, 150, 160);
 }
