@@ -11,7 +11,7 @@ header {
   display: flex;
   align-items: center;
   background-color: rgb(133, 174, 185);
-  height: 5rem;
+  height: 10vh;
   font-size: 1.5rem;
 }
 
@@ -24,7 +24,7 @@ h1 {
 main {
   display: flex;
   flex-direction: column;
-  height: calc(100vh - 5rem);
+  height: calc(100vh - 10vh);
   ;
   justify-content: center;
   align-items: center;
@@ -49,6 +49,16 @@ main {
 .checkout input {
   width: 18rem;
   height: 1.8rem;
+  padding: .4rem;
+}
+
+.checkout .detalles-pago {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 75%;
+  height: 60%;
 }
 
 .checkout .cvv-expiracion {
@@ -64,6 +74,22 @@ main {
 
 .cvv-expiracion .expiracion {
   width: 5rem;
+}
+
+.cvv-expiracion img {
+  width: 6rem;
+  margin-left: 1rem;
+}
+
+.checkout .total-compra {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.total-compra div {
+  display: flex;
+  justify-content: space-between;
 }
 
 .checkout .validate-btn {
@@ -90,7 +116,7 @@ main {
   justify-content: center;
   position: fixed;
   pointer-events: none;
-  opacity: 0;  
+  opacity: 0;
   top: 0;
   left: 0;
   height: 100vh;
@@ -132,4 +158,8 @@ main {
 
 .modal .close:hover {
   background-color: rgb(115, 150, 160);
+}
+
+.card-info .cargo-a {
+  font-weight: 600;
 }

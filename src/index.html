@@ -3,9 +3,10 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Tarjeta de crédito válida</title> 
+  <title>Tarjeta de crédito válida</title>
   <!-- META TAGS -->
   <link rel="stylesheet" href="style.css" />
+
 </head>
 
 <body>
@@ -13,22 +14,38 @@
     <h1>Checkout</h1>
   </header>
   <main>
-    <div class="checkout">
-      <h2>Ingrese sus datos</h2>
-      <input type="text" placeholder="Nombre completo" class="name" id="name">
-      <input type="text" placeholder="Dirección" class="address" id="address">
-      <input type="text" placeholder="Código postal" class="cp" id="cp">
-      <input type="text" placeholder="Correo electrónico" class="email" id="email">
-      <h2>Ingrese número de tarjeta: </h2>
-      <input type="text" minlength="16" maxlength="16" name="card-number" class="card-number" id="card-number">
-
-      <div class="cvv-expiracion">
-        <input type="password" placeholder="CVV" maxlength="3" class="cvv">
-        <input type="text" placeholder="Expiración" maxlength="5" class="expiracion">
+    <section class="checkout">
+      <div class="detalles-pago">
+        <h2>Detalles de pago</h2>
+        <input type="text" placeholder="Nombre completo" class="name" id="name">
+        <input type="text" placeholder="Dirección" class="address" id="address">
+        <input type="text" placeholder="Código postal" class="cp" id="cp">
+        <input type="text" placeholder="Correo electrónico" class="email" id="email">
+        <h2>Ingrese número de tarjeta: </h2>
+        <input type="text" placeholder="xxxx xxxx xxxx xxxx" minlength="16" maxlength="16" name="card-number" class="card-number" id="card-number">
+        <div class="cvv-expiracion">
+          <input type="password" placeholder="CVV" maxlength="3" class="cvv">
+          <input type="text" placeholder="MM/AA" maxlength="5" class="expiracion">
+          <img src="visa-mastercard-amex.png" alt="">
+        </div>
       </div>
 
-      <button class="validate-btn" id="validate-btn">Validar</button>
-    </div>
+      <div class="total-compra">
+        <div>
+          <h3>Subtotal:</h3>
+          <p>$950</p>
+        </div>
+        <div>
+          <h3>Envío:</h3>
+          <p>$100</p>
+        </div>
+        <div>
+          <h3>Total:</h3>
+          <p>$1050</p>
+        </div>
+      </div>
+      <button class="validate-btn" id="validate-btn">Pagar</button>
+    </section>
 
     <div class="modal-container" id="modal-container">
       <div class="modal" id="modal">
@@ -44,7 +61,7 @@
         </div>
 
         <div class="card-info">
-          <p>Cargo a la tarjeta:</p>
+          <p class="cargo-a">Cargo a la tarjeta:</p>
           <p id="show-card-number"></p>
           <p id="bank"></p>
         </div>
