@@ -4,16 +4,10 @@ const validator = {
   },
 
   maskify: function (creditCardNumber) {
-    let hiddenNumbers = creditCardNumber.substring(0, creditCardNumber.length - 4);
-    hiddenNumbers = hiddenNumbers.replace(/\d/g, "#");
-    hiddenNumbers = (hiddenNumbers + creditCardNumber.slice(-4));
-
-    //show card number in modal
-    document.getElementById("show-card-number").textContent =
-    hiddenNumbers;
-
-    //alert(hiddenNumbers);
-    return hiddenNumbers;
+    let hideNumbers = creditCardNumber.substring(0, creditCardNumber.length - 4);
+    hideNumbers = hideNumbers.replace(/\d/g, "#");
+    hideNumbers = (hideNumbers + creditCardNumber.slice(-4));
+    return hideNumbers;
 
   },
 
@@ -28,10 +22,6 @@ const validator = {
     } else {
       bank = 'Banco desconocido'
     }
-
-    //show bank in modal
-    document.getElementById("bank").textContent = bank;
-    //alert(bank);
     return bank;
   }
 };

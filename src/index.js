@@ -7,8 +7,8 @@ function validateCreditCard() {
   const creditCardNumber = document.getElementById('card-number').value;
   if (validateNumbers(creditCardNumber)) {
     validator.isValid(creditCardNumber);
-    validator.maskify(creditCardNumber);
-    validator.getBank(creditCardNumber);
+    document.getElementById("show-card-number").textContent = validator.maskify(creditCardNumber);
+    document.getElementById("bank").textContent = validator.getBank(creditCardNumber);
     showShopperInfo();
     return (creditCardNumber);
   } 
@@ -28,8 +28,8 @@ function validateNumbers(creditCardNumber) {
 
 // Modal 
 function showModal(){
-  let modalContainer = document.getElementById('modal-container');
-  let closeModal = document.getElementById('close');
+  const modalContainer = document.getElementById('modal-container');
+  const closeModal = document.getElementById('close');
   
   validateButton.addEventListener('click', () => {
     modalContainer.classList.add('show');
@@ -42,10 +42,10 @@ function showModal(){
 
 //Mostrar datos del comprador
 function showShopperInfo() {
-  let name = document.getElementById('name');
-  let address = document.getElementById('address');
-  let postalCode = document.getElementById('cp');
-  let email = document.getElementById('email');
+  const name = document.getElementById('name');
+  const address = document.getElementById('address');
+  const postalCode = document.getElementById('cp');
+  const email = document.getElementById('email');
 
   localStorage.setItem("nombre", name.value);
   localStorage.setItem("direccion", address.value);
