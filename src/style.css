@@ -73,7 +73,7 @@ main {
 }
 
 .cvv-expiracion .expiracion {
-  width: 5rem;
+  width: 2.8rem;
 }
 
 .cvv-expiracion img {
@@ -140,9 +140,15 @@ main {
   opacity: 1;
 }
 
+.modal h3 {
+  font-size: 1.8rem;
+
+}
+
 .modal .shopper-info {
   display: flex;
   flex-direction: column;
+  font-size: 1.2rem;
 }
 
 .modal .close {
@@ -160,6 +166,17 @@ main {
   background-color: rgb(115, 150, 160);
 }
 
+.card-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
 .card-info .cargo-a {
   font-weight: 600;
+}
+
+.card-issuer {
+  width: 4rem;
 }

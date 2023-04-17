@@ -24,7 +24,10 @@
         <input type="text" placeholder="xxxx xxxx xxxx xxxx" minlength="16" maxlength="16" name="card-number" class="card-number" id="card-number">
         <div class="cvv-expiracion">
           <input type="password" placeholder="CVV" maxlength="3" class="cvv">
-          <input type="text" placeholder="MM/AA" maxlength="5" class="expiracion">
+          <input type="text" placeholder="MM" maxlength="2" class="expiracion">
+          <p>/</p>
+          <input type="text" placeholder="AA" maxlength="2" class="expiracion">
+
           <img src="./img/visa-mastercard-amex.png" alt="">
         </div>
       </div>
@@ -59,10 +62,11 @@
           <p id="correo-modal"></p>
         </div>
 
+        <h3 class="cargo-a">Cargo a la tarjeta:</h3>
         <div class="card-info">
-          <p class="cargo-a">Cargo a la tarjeta:</p>
           <p id="show-card-number"></p>
           <p id="bank"></p>
+          <img class="card-issuer" id="card-issuer" src="" alt="">
         </div>
 
         <button class="close" id="close">Cerrar</button>

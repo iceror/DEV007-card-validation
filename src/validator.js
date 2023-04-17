@@ -20,7 +20,7 @@ const validator = {
     } else if (creditCardNumber.substring(0, 2) >= '51' && creditCardNumber.substring(0, 2) <= '55') {
       bank = 'MasterCard';
     } else {
-      bank = 'Banco desconocido'
+      bank = 'Banco-desconocido'
     }
     return bank;
   }
