@@ -9,8 +9,8 @@ function validateCreditCard() {
     validator.isValid(creditCardNumber);
     document.getElementById("show-card-number").textContent = validator.maskify(creditCardNumber);
 
-    let bankIssuer = validator.getBank(creditCardNumber);
-    let imgBankIssuer = document.getElementById("card-issuer");
+    const bankIssuer = validator.getBank(creditCardNumber);
+    const imgBankIssuer = document.getElementById("card-issuer");
     imgBankIssuer.src = `img/${bankIssuer}.png`;
 
     showShopperInfo();
