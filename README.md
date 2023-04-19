@@ -33,9 +33,9 @@ Usé GitHub para el control de versiones y GitHub Pages para realizar el deploy 
 ## 2. Uso de HTML, CSS y JS (Eventos del DOM)
 Trabajé HTML siguiendo el boilerplate proporcionado. 
 
-Utilicé las etiquetas "<section>" y "<div>" para dividir los elementos de mi diseño.
-Las etiquetas "<h1>", "<h2>", y "<h3>" para los diferentes títulos de las secciones y 
-la etiqueta "<p>" para el texto común. 
+Utilicé las etiquetas section y div para dividir los elementos de mi diseño.
+Las etiquetas h1, h2, y h3 para los diferentes títulos de las secciones y 
+la etiqueta p para el texto común. 
 
 A cada etiqueta le asigné una class y un id; las class las utilicé para llamarlas 
 con CSS y aplicar estilos. Utilicé las propiedades de Flexbox para posicionar los elementos 
