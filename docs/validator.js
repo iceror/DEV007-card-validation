@@ -14,13 +14,13 @@ const validator = {
   getBank: function (creditCardNumber) {
     let bank = '';
     if (creditCardNumber.charAt(0) === '4') {
-      bank = 'Visa';
+      bank = 'visa';
     } else if (creditCardNumber.substring(0, 2) === '34' || creditCardNumber.substring(0, 2) === '37') {
-      bank = 'AmericanExpress';
+      bank = 'americanexpress';
     } else if (creditCardNumber.substring(0, 2) >= '51' && creditCardNumber.substring(0, 2) <= '55') {
-      bank = 'MasterCard';
+      bank = 'masterCard';
     } else {
-      bank = 'Banco-desconocido'
+      bank = 'banco-desconocido'
     }
     return bank;
   }
