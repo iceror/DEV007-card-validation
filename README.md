@@ -55,3 +55,4 @@ de su compra en una ventana de confirmación.
 Con JS realicé asignación de variables y constantes. Asignación de funciones, ciclos, métodos del objeto validator,
 y métodos de array.
 
+<img width="1440" alt="image" src="https://user-images.githubusercontent.com/123616840/235721884-b836a74b-f50b-4168-bd79-4edc7ee159db.png">
