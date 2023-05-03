@@ -18,7 +18,7 @@ const validator = {
     } else if (creditCardNumber.substring(0, 2) === '34' || creditCardNumber.substring(0, 2) === '37') {
       bank = 'americanexpress';
     } else if (creditCardNumber.substring(0, 2) >= '51' && creditCardNumber.substring(0, 2) <= '55') {
-      bank = 'masterCard';
+      bank = 'mastercard';
     } else {
       bank = 'banco-desconocido'
     }
