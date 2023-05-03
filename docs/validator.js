@@ -14,11 +14,11 @@ const validator = {
   getBank: function (creditCardNumber) {
     let bank = '';
     if (creditCardNumber.charAt(0) === '4') {
-      bank = 'visa';
+      bank = 'Visa';
     } else if (creditCardNumber.substring(0, 2) === '34' || creditCardNumber.substring(0, 2) === '37') {
-      bank = 'americanexpress';
+      bank = 'AmericanExpress';
     } else if (creditCardNumber.substring(0, 2) >= '51' && creditCardNumber.substring(0, 2) <= '55') {
-      bank = 'mastercard';
+      bank = 'MasterCard';
     } else {
       bank = 'banco-desconocido'
     }
