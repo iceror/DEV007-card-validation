@@ -1,5 +1,5 @@
 // importamos el objeto `validator`, que contiene las funciones `isValid` y `maskify`
-import validator from '../src/validator';
+import validator from '../docs/validator';
 
 describe('validator', () => {
   it('debería ser un objeto', () => {
@@ -47,27 +47,27 @@ describe('validator', () => {
       expect(typeof validator.getBank).toBe('function');
     });
 
-    it('Debería retornar "Visa" para "4556364607935616"', () => {
+    it('Debería retornar "visa" para "4556364607935616"', () => {
       expect(validator.getBank('4556364607935616')).toBe('Visa');
     });
 
-    it('Debería retornar "AmericanExpress" para "3456364607935616"', () => {
+    it('Debería retornar "americanexpress" para "3456364607935616"', () => {
       expect(validator.getBank('3456364607935616')).toBe('AmericanExpress');
     })
 
-    it('Debería retornar "AmericanExpress" para "3756364607935616"', () => {
+    it('Debería retornar "americanexpress" para "3756364607935616"', () => {
       expect(validator.getBank('3756364607935616')).toBe('AmericanExpress');
     })
 
-    it('Debería retornar "MasterCard" para "5156364607935616"', () => {
+    it('Debería retornar "mastercard" para "5156364607935616"', () => {
       expect(validator.getBank('5156364607935616')).toBe('MasterCard');
     })
 
-    it('Debería retornar "MasterCard" para "5356364607935616"', () => {
+    it('Debería retornar "mastercard" para "5356364607935616"', () => {
       expect(validator.getBank('5356364607935616')).toBe('MasterCard');
     })
 
-    it('Debería retornar "MasterCard" para "5556364607935616"', () => {
+    it('Debería retornar "mastercard" para "5556364607935616"', () => {
       expect(validator.getBank('5556364607935616')).toBe('MasterCard');
     })
   });
