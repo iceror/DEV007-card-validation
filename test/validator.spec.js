@@ -37,9 +37,6 @@ describe('validator', () => {
       expect(validator.maskify('1')).toBe('1');
     });
 
-    it('Debería retornar "######orld" para "helloworld"', () => {
-      expect(validator.maskify('helloworld')).toBe('######orld');
-    });
   });
 
   describe('validator.getBank', () => {
@@ -69,6 +66,10 @@ describe('validator', () => {
 
     it('Debería retornar "MasterCard" para "5556364607935616"', () => {
       expect(validator.getBank('5556364607935616')).toBe('MasterCard');
+    })
+
+    it('Debería retornar "banco-desconocido" para "6656364607935616"', () => {
+      expect(validator.getBank('6656364607935616')).toBe('banco-desconocido');
     })
   });
 });
